@@ -26,7 +26,7 @@
       <th>Category</th>
       <th>Description</th>
       <th>Life</th>
-      <th>Created At</th>
+<!--      <th>Created At</th>-->
       <th>Actions</th>
     </tr>
     </thead>
@@ -38,8 +38,7 @@
       <td th:text="${animal.category}"></td>
       <td th:text="${animal.description}"></td>
       <td th:text="${animal.life}"></td>
-      <td th:text="${animal.createdAt}"></td>
-
+<!--        <td th:text="${animal.createdAt != null ? #dates.format(#temporal.convert(animal.createdAt, 'java.time.LocalDateTime'), 'dd-MM-yyyy HH:mm:ss') : ''}"></td>-->
 
 
       <!-- Add update button Link  -->
