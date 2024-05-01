@@ -2,6 +2,7 @@ package com.saurav.animals.enitity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -25,14 +26,10 @@ public class Animals {
     @Column(name="category",columnDefinition = "TEXT")
     private String category;
 
-    @Column(name="image",nullable = true)
-    private byte[] image;
+    @Lob
+    @Column(name="image",columnDefinition = "BLOB")
+    private String image;
 
-    @Transient
-    public  String getPhotosImagePath(){
-        if(image ==null) return null;
-        return "/animals-photos/" + id + "/" + Arrays.toString(image);
-    }
 
     @Column(name="description")
     private String description;

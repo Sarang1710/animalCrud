@@ -10,4 +10,8 @@ public interface AnimalService {
     Animals save(Animals animals, MultipartFile multipartFile);
 
     List<Animals> findAll();
+
+    void deleteById(long id);
+
+//    List<Animals> searchAnimals(String query);
 }
